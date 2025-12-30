@@ -27,7 +27,7 @@ function App() {
   return (
     <>
       <Header scrollToSection={scrollToSection} />
-      <Hero ref={HeroRef} />
+      <Hero ref={HeroRef} scrollToSection={scrollToSection} />
     </>
   )
 }
