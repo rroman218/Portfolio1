@@ -2,6 +2,7 @@ import { forwardRef } from "react"
 import type { ScrollToSectionProps } from "../types/ScrollToSection"
 import HeroPerson from "../assets/HeroPerson.jpg"
 import { ArrowRight, Mail } from "lucide-react"
+import { Button } from "./ui/Button"
 
 export const Hero = forwardRef<HTMLDivElement, ScrollToSectionProps>(({ scrollToSection }, ref) => {
   return (
@@ -23,21 +24,21 @@ export const Hero = forwardRef<HTMLDivElement, ScrollToSectionProps>(({ scrollTo
             </p>
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <button
+              <Button
                 onClick={() => scrollToSection('portfolio')}
-                className="group px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-600/20 hover:shadow-xl hover:shadow-blue-600/30"
+                variant="hero-portfolio-link"
               >
                 <span>Переглянути портфоліо</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </Button>
 
-              <button
+              <Button
                 onClick={() => scrollToSection('contact')}
-                className="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-blue-600 hover:text-blue-600 transition-all flex items-center justify-center gap-2"
+                variant="hero-contact-link"
               >
                 <Mail className="w-5 h-5" />
                 <span>Зв'язатися</span>
-              </button>
+              </Button>
             </div>
           </div>
           {/* Image container */}
