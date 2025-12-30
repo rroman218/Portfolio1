@@ -1,5 +1,6 @@
 import { forwardRef } from "react"
 import type { ScrollToSectionProps } from "../types/ScrollToSection"
+import HeroPerson from "../assets/HeroPerson.jpg"
 import { ArrowRight, Mail } from "lucide-react"
 
 export const Hero = forwardRef<HTMLDivElement, ScrollToSectionProps>(({ scrollToSection }, ref) => {
@@ -17,9 +18,10 @@ export const Hero = forwardRef<HTMLDivElement, ScrollToSectionProps>(({ scrollTo
               вирішувати реальні завдання користувачів через продуманий дизайн.
             </p>
             <p className="mb-10 text-gray-600">
-              Мій підхід поєднує дослідження, креативність та увагу до деталей, 
+              Мій підхід поєднує дослідження, креативність та увагу до деталей,
               щоб кожен проєкт був не просто красивим, а й функціональним.
             </p>
+            {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={() => scrollToSection('portfolio')}
@@ -37,6 +39,16 @@ export const Hero = forwardRef<HTMLDivElement, ScrollToSectionProps>(({ scrollTo
                 <span>Зв'язатися</span>
               </button>
             </div>
+          </div>
+          {/* Image container */}
+          <div className="relative">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <img src={HeroPerson} alt="" />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent"></div>
+            </div>
+            {/* Decoration elements */}
+            <div className="absolute -top-6 -right-6 w-32 h-32 bg-blue-100 rounded-full -z-10"></div>
+            <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-blue-50 rounded-full -z-10"></div>
           </div>
         </div>
       </div>
