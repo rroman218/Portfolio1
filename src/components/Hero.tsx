@@ -10,34 +10,37 @@ export const Hero = forwardRef<HTMLDivElement, ScrollToSectionProps>(({ scrollTo
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="">
-            <p className="text-gray-600 mb-4 tracking-wide">UI/UX & Графічний дизайнер</p>
+            <p className="text-gray-600 mb-4 tracking-wide">
+              UI/UX & Graphic Designer
+            </p>
             <h1 className="mb-6">
-              Олександр Іванов
+              Alex Ivanov
             </h1>
             <p className="text-xl mb-8 text-gray-700 leading-relaxed">
-              Створюю зручні й красиві цифрові продукти, які допомагають бізнесу
-              вирішувати реальні завдання користувачів через продуманий дизайн.
+              Creating convenient and beautiful digital products that help businesses
+              solve real user problems through thoughtful design.
             </p>
             <p className="mb-10 text-gray-600">
-              Мій підхід поєднує дослідження, креативність та увагу до деталей,
-              щоб кожен проєкт був не просто красивим, а й функціональним.
+              My approach combines research, creativity, and attention to detail
+              to ensure each project is not just beautiful, but also functional.
             </p>
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
+              {/* Button for portfolio */}
               <Button
                 onClick={() => scrollToSection('portfolio')}
                 variant="hero-portfolio-link"
               >
-                <span>Переглянути портфоліо</span>
+                <span>View Portfolio</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-
+              {/* Button for contact */}
               <Button
                 onClick={() => scrollToSection('contact')}
                 variant="hero-contact-link"
               >
                 <Mail className="w-5 h-5" />
-                <span>Зв'язатися</span>
+                <span>Contact Me</span>
               </Button>
             </div>
           </div>
