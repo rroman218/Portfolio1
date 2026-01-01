@@ -19,7 +19,7 @@ export const Card: FC<CardProps> = ({ children, variant }) => {
             },
             {
                 // Stats
-                "text-center p-8 bg-white rounded-2xl shadow-sm":
+                "text-center py-8 bg-white rounded-2xl shadow-sm":
                 variant === "stats"
             }
         )}>{children}</span>
