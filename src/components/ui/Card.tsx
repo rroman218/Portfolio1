@@ -1,16 +1,25 @@
 import clsx from "clsx"
-import type { FC, ReactNode, ElementType } from "react"
+import type { FC, ReactNode } from "react"
 
-type CardType = "skills" | "stats" | "portfolio-blocks"
+type CardType = "skills" | "stats" | "portfolio_blocks"| "process_blocks"
 
 interface CardProps {
   children: ReactNode
   variant?: CardType
 }
 
-export const Card: FC<CardProps> = ({ children, variant }) => {
-  const Component: ElementType =
-    variant === "portfolio-blocks" || variant === "stats" ? "div" : "span"
+const componentMap = {
+  skills: "span",
+  stats: "div",
+  portfolio_blocks: "div",
+  process_blocks: "div"
+} as const
+
+export const Card: FC<CardProps> = ({
+  children,
+  variant = "skills",
+}) => {
+  const Component = componentMap[variant]
 
   return (
     <Component
@@ -27,7 +36,11 @@ export const Card: FC<CardProps> = ({ children, variant }) => {
 
           // Portfolio blocks
           "group rounded-2xl bg-white overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-xl":
-            variant === "portfolio-blocks",
+            variant === "portfolio_blocks",
+          
+          // Process blocks
+          "relative bg-white p-8 shadow-sm hover:shadow-md transition-shadow rounded-2xl":
+          variant === "process_blocks"
         }
       )}
     >

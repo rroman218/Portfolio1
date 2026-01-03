@@ -1,7 +1,8 @@
 /* File with constants */
 
-// About section
+import { Lightbulb, Palette, Rocket, Search } from "lucide-react";
 
+// About section
 export const skills = [
   'Figma', 'Adobe XD', 'Photoshop', 'Illustrator',
   'Sketch', 'Prototyping', 'Design Systems', 'User Research',
@@ -15,7 +16,6 @@ export const stats = [
 ]
 
 // Portfolio section
-
 export const categories = ['All', 'UI/UX', 'Web', 'Branding'];
 
 export const projects = [
@@ -54,5 +54,29 @@ export const projects = [
     category: 'UI/UX',
     description: 'Dashboard design for analytics platform',
     image: 'https://images.unsplash.com/photo-1764601841480-d3c8b8ee9918?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w 3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB1aSUyMGRlc2lnbnxlbnwxfHx8fDE3NjU1MTg1Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080'
+  }
+];
+
+// Process section
+export const steps = [
+  {
+    icon: Search,
+    title: 'Research & Briefing',
+    description: 'I study your business, target audience, competitors, and create technical specifications'
+  },
+  {
+    icon: Lightbulb,
+    title: 'Concept & Prototype',
+    description: 'I create wireframes and interactive prototypes to test ideas'
+  },
+  {
+    icon: Palette,
+    title: 'Visual Design',
+    description: 'I develop the final design with attention to details, colors, and typography'
+  },
+  {
+    icon: Rocket,
+    title: 'Handoff & Support',
+    description: 'I prepare all necessary files and provide support during development'
   }
 ];

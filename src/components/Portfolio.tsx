@@ -29,7 +29,7 @@ export const Portfolio = forwardRef<HTMLDivElement>((_, ref) => {
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {finteredActive.map((projects, index) => (
-                        <Card key={index} variant="portfolio-blocks">
+                        <Card key={index} variant="portfolio_blocks">
                             <div className="relative aspect-[4/3] overflow-hidden">
                                 <img src={projects.image} alt={projects.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                                 <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/10 transition-all duration-300"></div>
