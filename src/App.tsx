@@ -5,12 +5,14 @@ import { Hero } from './components/Hero'
 import { About } from './components/About'
 import { Portfolio } from './components/Portfolio'
 import { Process } from './components/Process'
+import { Testimonials } from './components/Testimonials'
 
 function App() {
   const HeroRef = useRef<HTMLDivElement>(null);
   const AboutRef = useRef<HTMLDivElement>(null);
   const PortfolioRef = useRef<HTMLDivElement>(null);
   const ProcessRef = useRef<HTMLDivElement>(null);
+  const TestimonialsRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
@@ -20,6 +22,7 @@ function App() {
       about: AboutRef,
       portfolio: PortfolioRef,
       process: ProcessRef,
+      testimonials: TestimonialsRef,
       services: servicesRef,
       contact: contactRef,
     };
@@ -36,6 +39,7 @@ function App() {
       <About ref={AboutRef} />
       <Portfolio ref={PortfolioRef} />
       <Process ref={ProcessRef} />
+      <Testimonials ref={TestimonialsRef} />
     </div>
   )
 }

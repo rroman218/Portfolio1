@@ -3,11 +3,12 @@ import type { ScrollToSectionProps } from "../types/ScrollToSection"
 import HeroPerson from "../assets/HeroPerson.jpg"
 import { ArrowRight, Mail } from "lucide-react"
 import { Button } from "./ui/Button"
+import { Div } from "./ui/Div"
 
 export const Hero = forwardRef<HTMLDivElement, ScrollToSectionProps>(({ scrollToSection }, ref) => {
   return (
     <section ref={ref} className="min-h-screen flex items-center py-20 px-6">
-      <div className="max-w-7xl mx-auto w-full">
+      <Div variant="container" className="w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="">
             <p className="text-gray-600 mb-4 tracking-wide">
@@ -55,7 +56,7 @@ export const Hero = forwardRef<HTMLDivElement, ScrollToSectionProps>(({ scrollTo
             <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-blue-50 rounded-full -z-10"></div>
           </div>
         </div>
-      </div>
+      </Div>
     </section>
   )
 })

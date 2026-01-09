@@ -3,6 +3,7 @@ import { categories, projects } from "../const"
 import { Button } from "./ui/Button"
 import { ExternalLink } from "lucide-react"
 import { Card } from "./ui/Card"
+import { Div } from "./ui/Div"
 
 export const Portfolio = forwardRef<HTMLDivElement>((_, ref) => {
     const [ActiveCategory, setActiveCategory] = useState("All")
@@ -10,8 +11,8 @@ export const Portfolio = forwardRef<HTMLDivElement>((_, ref) => {
         ? projects
         : projects.filter(p => p.category === ActiveCategory)
     return (
-        <section ref={ref} className="py-24 px-6 lg:px-12">
-            <div className="max-w-7xl mx-auto">
+        <Div ref={ref} variant="section">
+            <Div variant="container">
                 <div className="text-center mb-12">
                     <p className="tracking-wide mb-4">My Work</p>
                     <h2 className="mb-6">Portfolio</h2>
@@ -48,8 +49,8 @@ export const Portfolio = forwardRef<HTMLDivElement>((_, ref) => {
                         </Card>
                     ))}
                 </div>
-            </div>
-        </section>
+            </Div>
+        </Div>
     )
 }
 )

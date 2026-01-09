@@ -1,11 +1,12 @@
 import { forwardRef } from "react"
 import { skills, stats } from "../const"
 import { Card } from "./ui/Card"
+import { Div } from "./ui/Div"
 
 export const About = forwardRef<HTMLDivElement>((_, ref) => {
   return (
-    <section ref={ref} className="py-24 px-6 lg:px-12 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
+    <Div ref={ref} variant="section" className="bg-gray-50">
+      <Div variant="container">
         <div className="text-center mb-16">
           <p className="text-blue-600 mb-6 tracking-wide">About me</p>
           <h2 className="mb-6">Designer with a passion for details</h2>
@@ -35,8 +36,8 @@ export const About = forwardRef<HTMLDivElement>((_, ref) => {
             </Card>
           ))}
         </div>
-      </div>
-    </section>
+      </Div>
+    </Div>
   )
 }
 )

@@ -80,3 +80,23 @@ export const steps = [
     description: 'I prepare all necessary files and provide support during development'
   }
 ];
+
+// Testimonials section
+
+export const testimonials = [
+  {
+    name: 'Maria Peterson',
+    role: 'CEO, TechStart',
+    text: 'Alex created an incredible design for us. Attention to detail, professionalism, and understanding of business goals – everything at the highest level. Highly recommend!'
+  },
+  {
+    name: 'David Kovalenko',
+    role: 'Product Manager, FinApp',
+    text: 'Working with Alex was easy and pleasant. He quickly understood our needs and offered creative solutions that significantly improved our product UX.'
+  },
+  {
+    name: 'Sophie Anderson',
+    role: 'Marketing Director, E-Shop',
+    text: 'The design of our online store exceeded all expectations. Conversion increased by 40% after the redesign. Thank you for the great work!'
+  }
+];

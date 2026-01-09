@@ -1,7 +1,8 @@
 import clsx from "clsx"
 import type { FC, ReactNode } from "react"
+import { testimonials } from "../../const"
 
-type CardType = "skills" | "stats" | "portfolio_blocks"| "process_blocks"
+type CardType = "skills" | "stats" | "portfolio_blocks" | "process_blocks" | "testimonials"
 
 interface CardProps {
   children: ReactNode
@@ -12,7 +13,8 @@ const componentMap = {
   skills: "span",
   stats: "div",
   portfolio_blocks: "div",
-  process_blocks: "div"
+  process_blocks: "div",
+  testimonials: "div"
 } as const
 
 export const Card: FC<CardProps> = ({
@@ -37,10 +39,14 @@ export const Card: FC<CardProps> = ({
           // Portfolio blocks
           "group rounded-2xl bg-white overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-xl":
             variant === "portfolio_blocks",
-          
+
           // Process blocks
           "relative bg-white p-8 shadow-sm hover:shadow-md transition-shadow rounded-2xl":
-          variant === "process_blocks"
+            variant === "process_blocks",
+
+          // Testimonials cards
+          "bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100":
+            variant === "testimonials"
         }
       )}
     >
