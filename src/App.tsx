@@ -6,6 +6,7 @@ import { About } from './components/About'
 import { Portfolio } from './components/Portfolio'
 import { Process } from './components/Process'
 import { Testimonials } from './components/Testimonials'
+import { Services } from './components/Services'
 
 function App() {
   const HeroRef = useRef<HTMLDivElement>(null);
@@ -13,7 +14,7 @@ function App() {
   const PortfolioRef = useRef<HTMLDivElement>(null);
   const ProcessRef = useRef<HTMLDivElement>(null);
   const TestimonialsRef = useRef<HTMLDivElement>(null);
-  const servicesRef = useRef<HTMLDivElement>(null);
+  const ServicesRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
   const scrollToSection = (section: string) => {
@@ -23,7 +24,7 @@ function App() {
       portfolio: PortfolioRef,
       process: ProcessRef,
       testimonials: TestimonialsRef,
-      services: servicesRef,
+      services: ServicesRef,
       contact: contactRef,
     };
 
@@ -40,6 +41,7 @@ function App() {
       <Portfolio ref={PortfolioRef} />
       <Process ref={ProcessRef} />
       <Testimonials ref={TestimonialsRef} />
+      <Services ref={ServicesRef}/>
     </div>
   )
 }

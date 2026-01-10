@@ -1,6 +1,6 @@
 /* File with constants */
 
-import { Lightbulb, Palette, Rocket, Search } from "lucide-react";
+import { BarChart, Lightbulb, Monitor, Palette, Rocket, Search, Smartphone } from "lucide-react";
 
 // About section
 export const skills = [
@@ -98,5 +98,34 @@ export const testimonials = [
     name: 'Sophie Anderson',
     role: 'Marketing Director, E-Shop',
     text: 'The design of our online store exceeded all expectations. Conversion increased by 40% after the redesign. Thank you for the great work!'
+  }
+];
+
+// Services section
+
+export const services = [
+  {
+    icon: Monitor,
+    title: 'Website Design',
+    description: 'Creating responsive, modern websites that convert visitors into customers',
+    price: 'from $500'
+  },
+  {
+    icon: Smartphone,
+    title: 'Mobile App Design',
+    description: 'UI/UX design for iOS and Android with a focus on usability',
+    price: 'from $700'
+  },
+  {
+    icon: Palette,
+    title: 'Branding & Identity',
+    description: 'Logo development, corporate style, and all necessary brand carriers',
+    price: 'from $400'
+  },
+  {
+    icon: BarChart,
+    title: 'UI/UX Audit',
+    description: 'Analysis of existing product and recommendations for improving user experience',
+    price: 'from $300'
   }
 ];
