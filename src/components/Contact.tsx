@@ -12,6 +12,16 @@ export const Contact = forwardRef<HTMLDivElement>((_, ref) => {
     message: ""
   })
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert('Thank you for your message! I will contact you soon.');
+    setFormData({ name: '', email: '', projectType: '', message: '' });
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
   return (
     <Div variant="section" ref={ref}>
       <div className="max-w-5xl mx-auto">
@@ -25,7 +35,7 @@ export const Contact = forwardRef<HTMLDivElement>((_, ref) => {
         {/* Contact Form */}
         <div className="grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
-            <form className="space-y-6" action="">
+            <form className="space-y-6" action="" onClick={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="">
                   <label htmlFor="name" className="block text-sm mb-2 text-gray-700">
@@ -33,6 +43,7 @@ export const Contact = forwardRef<HTMLDivElement>((_, ref) => {
                   </label>
                   <input type="text" id="name" name="name"
                     value={formData.name}
+                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
                     placeholder="Your name" />
@@ -46,6 +57,7 @@ export const Contact = forwardRef<HTMLDivElement>((_, ref) => {
                     id="email"
                     name="email"
                     value={formData.email}
+                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
                     placeholder="your@email.com"
@@ -61,6 +73,7 @@ export const Contact = forwardRef<HTMLDivElement>((_, ref) => {
                   id="projectType"
                   name="projectType"
                   value={formData.projectType}
+                  onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
                 >
@@ -81,6 +94,7 @@ export const Contact = forwardRef<HTMLDivElement>((_, ref) => {
                   id="message"
                   name="message"
                   value={formData.message}
+                  onChange={handleChange}
                   required
                   rows={6}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all resize-none"

@@ -1,5 +1,5 @@
 import clsx from "clsx"
-import { forwardRef, type FC, type ReactNode } from "react"
+import { forwardRef, type ReactNode } from "react"
 
 type DivType = "container" | "section"
 
