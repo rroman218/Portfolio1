@@ -7,6 +7,7 @@ import { Portfolio } from './components/Portfolio'
 import { Process } from './components/Process'
 import { Testimonials } from './components/Testimonials'
 import { Services } from './components/Services'
+import { Contact } from './components/Contact'
 
 function App() {
   const HeroRef = useRef<HTMLDivElement>(null);
@@ -15,7 +16,7 @@ function App() {
   const ProcessRef = useRef<HTMLDivElement>(null);
   const TestimonialsRef = useRef<HTMLDivElement>(null);
   const ServicesRef = useRef<HTMLDivElement>(null);
-  const contactRef = useRef<HTMLDivElement>(null);
+  const ContactRef = useRef<HTMLDivElement>(null);
 
   const scrollToSection = (section: string) => {
     const map: Record<string, RefObject<HTMLDivElement | null>> = {
@@ -25,7 +26,7 @@ function App() {
       process: ProcessRef,
       testimonials: TestimonialsRef,
       services: ServicesRef,
-      contact: contactRef,
+      contact: ContactRef,
     };
 
     map[section]?.current?.scrollIntoView({
@@ -42,6 +43,7 @@ function App() {
       <Process ref={ProcessRef} />
       <Testimonials ref={TestimonialsRef} />
       <Services ref={ServicesRef}/>
+      <Contact ref={ContactRef}/>
     </div>
   )
 }

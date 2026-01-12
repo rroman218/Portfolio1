@@ -129,3 +129,11 @@ export const services = [
     price: 'from $300'
   }
 ];
+
+// Contacts section
+export const socialLinks = [
+  { name: 'Behance', url: 'https://behance.net', icon: '🎨' },
+  { name: 'Dribbble', url: 'https://dribbble.com', icon: '🏀' },
+  { name: 'LinkedIn', url: 'https://linkedin.com', icon: '💼' },
+  { name: 'Instagram', url: 'https://instagram.com', icon: '📷' }
+];
