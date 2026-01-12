@@ -8,6 +8,7 @@ import { Process } from './components/Process'
 import { Testimonials } from './components/Testimonials'
 import { Services } from './components/Services'
 import { Contact } from './components/Contact'
+import { Footer } from './components/Footer'
 
 function App() {
   const HeroRef = useRef<HTMLDivElement>(null);
@@ -44,6 +45,7 @@ function App() {
       <Testimonials ref={TestimonialsRef} />
       <Services ref={ServicesRef}/>
       <Contact ref={ContactRef}/>
+      <Footer scrollToSection={scrollToSection} />
     </div>
   )
 }
